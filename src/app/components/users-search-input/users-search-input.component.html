@@ -1,0 +1,21 @@
+<div class="examples-holder">
+  <h3 class="title">
+    You can try example login:
+  </h3>
+  <div class="items-wrapper">
+
+  </div>
+  <div class="item text-info" *ngFor="let exampleLink of exampleLinks" (click)="putTestLogin(exampleLink)">
+    {{exampleLink}}
+  </div>
+</div>
+<div class="search-wrapper">
+  <form [formGroup]="searchUsersForm" novalidate>
+    <!--<label for="searchLoginString">Rss url</label>-->
+    <input class="form-control" type="text" placeholder="Put login here" name="searchLoginString" id="searchLoginString" formControlName="searchLoginString" required>
+    <div *ngIf="formErrors.searchLoginString" class="alert alert-danger">
+      {{ formErrors.searchLoginString }}
+    </div>
+    <button class="btn btn-primary" (click)="getApiData()">Get users data</button>
+  </form>
+</div>

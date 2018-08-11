@@ -1,1 +1,89 @@
 /* You can add global styles to this file, and also import other style files */
+img {
+  max-width: 100%;
+}
+#app-description {
+  text-align: center;
+  width: 100%;
+  text-align: center;
+}
+
+#global-router-wrapper {
+  .viewport-area {
+    height: 95vh;
+    width: 100%;
+    max-width: 900px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    padding: 0 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    overflow: hidden;
+    .output-area {
+      max-height: calc(100% - 142px);
+      overflow: auto;
+      margin-top: 20px;
+      position: relative;
+    }
+    .output-wrapper {
+      .table {
+        table-layout: fixed;
+        min-width: 750px;
+        tr {
+          td,th {
+            &:nth-child(1) {
+              width: 5%;
+            }
+            &:nth-child(2) {
+              width: 20%;
+            }
+            &:nth-child(3) {
+              width: 35%;
+            }
+            &:nth-child(4) {
+              width: 15%;
+              word-break: break-all;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+.search-wrapper {
+  max-width: 300px;
+  margin: 0 auto;
+  text-align: center;
+  .form-control {
+    width: 100%;
+    margin-bottom: 10px;
+    text-align: center;
+  }
+  .btn {
+    min-width: 140px;
+  }
+}
+
+.examples-holder {
+  text-align: center;
+  margin-bottom: 7px;
+  .title {
+    font-weight: bold;
+    font-size: 16px;
+    margin: 0;
+  }
+  .item {
+    font-size: 12px;
+    cursor: pointer;
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}
+
+/* You can add global styles to this file, and also import other style files */

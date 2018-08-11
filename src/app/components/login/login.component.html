@@ -1,0 +1,31 @@
+<div class="container user-profile-wrapper" *ngIf="userProfile">
+  <div class="row">
+    <div class="col-md-4">
+      <div class="user-avatar">
+        <img src="{{userProfile.avatar_url}}" alt="Avatar">
+      </div>
+    </div>
+    <div class="col-md-8">
+      <div class="user-data">
+        <h2 class="name" *ngIf="userProfile.name">
+          {{userProfile.name}}
+        </h2>
+        <div class="login">
+          Login: {{userProfile.login}}
+        </div>
+        <div class="followers">
+          Folowers: {{userProfile.followers}}
+        </div>
+        <div class="contacts" *ngIf="userProfile.location || userProfile.email">
+          <div class="location" *ngIf="userProfile.location">
+            Location: {{userProfile.location}}
+          </div>
+          <div class="email" *ngIf="userProfile.email">
+            Email: {{userProfile.email}}
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <a routerLink="/">Go to main page</a>
+</div>

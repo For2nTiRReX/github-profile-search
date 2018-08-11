@@ -5,7 +5,7 @@ import { APP_BASE_HREF } from '@angular/common';
 import { AppRoutes} from './app.routes';
 
 import { AppComponent } from './app.component';
-import {MainComponent} from './main/main.component';
+import {MainComponent} from './components/main/main.component';
 
 describe('AppComponent', () => {
   beforeEach(async(() => {
